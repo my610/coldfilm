@@ -1,0 +1,13 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "sqlite": "../../../data/backend.coldfilm.ru.sqlite",
+  "public": "../public/",
+  "auth": {
+    "idField": "id",
+    "token": {
+      "secret": "6dEAH9xx9/XWTptj+VkpS7eQm5XFNpw9xxY5tk5Qv57OdqKwcDllP8OR52vf083XRgjJvK8pXBSoY2LMYB5tCA=="
+    },
+    "local": {}
+  }
+}

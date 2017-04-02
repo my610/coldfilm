@@ -1,0 +1,55 @@
+<template>
+  <button class="btn btn-block" :class="['btn-' + size, 'btn-' + type]" type="submit"><i
+    :class="{'fa': loading, 'fa-spinner': loading, 'fa-spin': loading}"></i>
+    <slot></slot>
+  </button>
+</template>
+
+<script>
+  export default {
+    props: {
+      loading: {
+        type: Boolean,
+        required: true
+      },
+      size: {
+        type: String,
+        required: true
+      },
+      type: {
+        type: String,
+        required: true
+      }
+    }
+  }
+</script>
+<style>
+  .fa-spin {
+    -webkit-animation: fa-spin 2s infinite linear;
+    animation: fa-spin 2s infinite linear;
+  }
+  .fa-pulse {
+    -webkit-animation: fa-spin 1s infinite steps(8);
+    animation: fa-spin 1s infinite steps(8);
+  }
+  @-webkit-keyframes fa-spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(359deg);
+      transform: rotate(359deg);
+    }
+  }
+  @keyframes fa-spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(359deg);
+      transform: rotate(359deg);
+    }
+  }
+</style>
